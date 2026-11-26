@@ -2,6 +2,7 @@ import { NavLink, Outlet } from 'react-router-dom';
 import { useT } from '../i18n';
 import { useApp } from '../store';
 import Icon from './Icon';
+import NeonBackdrop from './NeonBackdrop';
 import type { Key } from '../i18n';
 
 const MAIN: { to: string; key: Key; icon: string }[] = [
@@ -25,7 +26,8 @@ export default function Layout() {
 
   return (
     <div className="min-h-screen">
-      <aside className="fixed inset-y-0 start-0 z-30 hidden w-64 flex-col bg-gradient-to-b from-brand-800 to-brand-900 p-4 md:flex">
+      <NeonBackdrop />
+      <aside className="sidebar fixed inset-y-0 start-0 z-30 hidden w-64 flex-col bg-gradient-to-b from-brand-800 to-brand-900 p-4 md:flex">
         <div className="mb-6 mt-2 flex items-center gap-3 px-2">
           <div className="grid h-10 w-10 place-items-center rounded-xl bg-white/15 text-white"><Icon name="cap" className="h-6 w-6" /></div>
           <span className="text-lg font-bold text-white">{t('appName')}</span>
@@ -37,8 +39,8 @@ export default function Layout() {
         </nav>
       </aside>
 
-      <div className="md:ms-64">
-        <header className="sticky top-0 z-20 flex items-center justify-between gap-2 border-b border-slate-200 bg-white/90 px-4 py-2 backdrop-blur dark:border-night-line dark:bg-night/90">
+      <div className="relative z-10 md:ms-64">
+        <header className="topbar sticky top-0 z-20 flex items-center justify-between gap-2 border-b border-slate-200 bg-white/90 px-4 py-2 backdrop-blur dark:border-night-line dark:bg-night/90">
           <div className="flex items-center gap-2 md:hidden">
             <div className="grid h-9 w-9 place-items-center rounded-lg bg-brand-600 text-white"><Icon name="cap" className="h-5 w-5" /></div>
             <span className="whitespace-nowrap text-sm font-bold">{t('appName')}</span>
@@ -61,7 +63,7 @@ export default function Layout() {
         <main className="mx-auto min-h-[calc(100vh-57px)] max-w-5xl px-4 pb-28 pt-6 md:pb-10"><Outlet /></main>
       </div>
 
-      <nav className="fixed inset-x-0 bottom-0 z-30 grid grid-cols-5 border-t border-slate-200 bg-white text-slate-600 dark:border-night-line dark:bg-night-card dark:text-slate-300 md:hidden" aria-label="Main">
+      <nav className="bottombar fixed inset-x-0 bottom-0 z-30 grid grid-cols-5 border-t border-slate-200 bg-white text-slate-600 dark:border-night-line dark:bg-night-card dark:text-slate-300 md:hidden" aria-label="Main">
         {MAIN.map((n) => (
           <NavLink key={n.to} to={n.to} end={n.to === '/'} className={({ isActive }) => `flex min-h-[60px] flex-col items-center justify-center gap-0.5 text-[11px] font-semibold ${isActive ? 'text-brand-600 dark:text-brand-200' : ''}`}>
             <Icon name={n.icon} className="h-6 w-6" />{t(n.key)}

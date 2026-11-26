@@ -28,12 +28,14 @@ const en = {
   plannerF1: 'Daily plan made for you', plannerF2: 'Revision reminders', plannerF3: 'Adjusts when you miss a day',
   progressDesc: 'See your scores and weak topics in simple charts.',
   progressF1: 'Score trend over time', progressF2: 'Weak topics list', progressF3: 'Weekly study hours',
-  yourName: 'Your name', examDate: 'Exam date', language: 'Language', theme: 'Theme', light: 'Light', dark: 'Dark', english: 'English', urdu: 'Urdu',
+  yourName: 'Your name', examDate: 'Exam date', language: 'Language', theme: 'Theme', light: 'Light', dark: 'Neon', english: 'English', urdu: 'Urdu',
   dataNote: 'Your settings are saved in this browser only.', resetData: 'Reset all data', confirmReset: 'Delete all saved data on this device?', saved: 'Saved',
   subj_sa: 'Software Architecture', subj_es: 'Embedded Systems', subj_db: 'Database Systems', subj_ca: 'Calculus',
   plan1: 'Revise architectural styles', plan2: 'Practise class diagrams', plan3: 'Quiz on interrupts and timers', plan4: 'Mock viva on database normalisation',
   weak1: 'Event-driven architecture', weak2: 'Interrupt handling', weak3: 'Integration by parts', weak4: 'Normal forms',
   minutes: 'min',
+  level: 'Level', xpUnit: 'XP', toNextLevel: 'to next level', badges: 'Badges', locked: 'Locked',
+  badge1: '5-day streak', badge2: 'First mock paper', badge3: 'Viva starter',
 };
 export type Key = keyof typeof en;
 
@@ -62,12 +64,14 @@ const ur: Record<Key, string> = {
   plannerF1: 'آپ کے لیے بنا ہوا روزانہ منصوبہ', plannerF2: 'دہرائی کی یاد دہانیاں', plannerF3: 'ناغہ ہونے پر خود بخود ردوبدل',
   progressDesc: 'اپنے نمبر اور کمزور موضوعات سادہ چارٹس میں دیکھیں۔',
   progressF1: 'وقت کے ساتھ نمبروں کا رجحان', progressF2: 'کمزور موضوعات کی فہرست', progressF3: 'ہفتہ وار پڑھائی کے گھنٹے',
-  yourName: 'آپ کا نام', examDate: 'امتحان کی تاریخ', language: 'زبان', theme: 'رنگ و روپ', light: 'روشن', dark: 'تاریک', english: 'انگریزی', urdu: 'اردو',
+  yourName: 'آپ کا نام', examDate: 'امتحان کی تاریخ', language: 'زبان', theme: 'رنگ و روپ', light: 'روشن', dark: 'نیون', english: 'انگریزی', urdu: 'اردو',
   dataNote: 'آپ کی ترتیبات صرف اسی براؤزر میں محفوظ ہیں۔', resetData: 'تمام ڈیٹا مٹائیں', confirmReset: 'اس ڈیوائس پر محفوظ تمام ڈیٹا حذف کریں؟', saved: 'محفوظ ہو گیا',
   subj_sa: 'سافٹ ویئر آرکیٹیکچر', subj_es: 'ایمبیڈڈ سسٹمز', subj_db: 'ڈیٹا بیس سسٹمز', subj_ca: 'کیلکولس',
   plan1: 'تعمیراتی طرزوں کی دہرائی', plan2: 'کلاس ڈایاگرام کی مشق', plan3: 'انٹرپٹس اور ٹائمرز پر کوئز', plan4: 'ڈیٹا بیس نارملائزیشن پر مشقی زبانی امتحان',
   weak1: 'واقعہ پر مبنی تعمیر', weak2: 'انٹرپٹ کی ہینڈلنگ', weak3: 'حصص کے ذریعے تکمل', weak4: 'نارمل فارمز',
   minutes: 'منٹ',
+  level: 'سطح', xpUnit: 'پوائنٹس', toNextLevel: 'اگلی سطح تک', badges: 'اعزازات', locked: 'مقفل',
+  badge1: 'پانچ دن کا تسلسل', badge2: 'پہلا مشقی پرچہ', badge3: 'زبانی امتحان کا آغاز',
 };
 
 const DICTS = { en, ur };

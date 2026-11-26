@@ -19,6 +19,12 @@ export const SAMPLE_WEAK: { id: string; key: Key; subject: Key; confidence: numb
   { id: 'w3', key: 'weak3', subject: 'subj_ca', confidence: 28 },
   { id: 'w4', key: 'weak4', subject: 'subj_db', confidence: 45 },
 ];
+export const SAMPLE_XP = { level: 3, xp: 240, next: 400 };
+export const SAMPLE_BADGES: { id: string; key: Key; icon: string; on: boolean }[] = [
+  { id: 'b1', key: 'badge1', icon: 'flame', on: true },
+  { id: 'b2', key: 'badge2', icon: 'papers', on: true },
+  { id: 'b3', key: 'badge3', icon: 'viva', on: false },
+];
 export const SAMPLE_STREAK = 5;
 export const SAMPLE_STUDY_MIN_TODAY = 95;
 

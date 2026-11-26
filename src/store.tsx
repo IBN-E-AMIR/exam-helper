@@ -19,7 +19,7 @@ const Ctx = createContext<AppState | null>(null);
 const PREFIX = 'examhelper.';
 
 export function AppProvider({ children }: { children: ReactNode }) {
-  const [settings, setSettings] = useLS<Settings>(PREFIX + 'settings', { name: '', examDate: '', lang: 'en', theme: 'light' });
+  const [settings, setSettings] = useLS<Settings>(PREFIX + 'settings2', { name: '', examDate: '', lang: 'en', theme: 'dark' });
   const [planDone, setPlanDone] = useLS<Record<string, boolean>>(PREFIX + 'planDone', {});
   const resetAll = () => {
     Object.keys(localStorage).filter((k) => k.startsWith(PREFIX)).forEach((k) => localStorage.removeItem(k));
